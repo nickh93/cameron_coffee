@@ -245,15 +245,15 @@
  * @endcode
  */
 $databases = array (
-  'default' => 
+  'default' =>
   array (
-    'default' => 
+    'default' =>
     array (
       'database' => 'cameron-database',
       'username' => 'database_zn',
       'password' => 'treehouse',
-      'host' => 'localhost',
-      'port' => '',
+      'host' => '127.0.0.1',
+      'port' => '8889',
       'driver' => 'mysql',
       'prefix' => '',
     ),
