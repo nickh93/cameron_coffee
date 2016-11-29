@@ -1,0 +1,6 @@
+name = Pet
+description = Information about my favorite kind of pet.
+package = My First Modules
+core = 7.x
+files[] = pet.module
+stylesheets[all][] = styles.css

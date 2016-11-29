@@ -1,0 +1,5 @@
+name = specials
+description = List out a restaurant's daily specials.
+package = My first modules
+core = 7.x
+files[] = specials.module

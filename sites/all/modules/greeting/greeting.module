@@ -24,10 +24,10 @@
         return '<p>Chao my dear homie!!!!</p>';
     }
 
-    function greeting_user_login() {
+    function greeting_user_login() { //this is the login hook that attaches to the login event
         $_GET['destination'] = 'hello_friend';
     }
 
-    function greeting_user_logout() {
+    function greeting_user_logout() { //this is the logout hook that attaches to the lobout event
         $_GET['destination'] = 'goodbye';
     }

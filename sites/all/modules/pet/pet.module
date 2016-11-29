@@ -1,0 +1,17 @@
+<?php
+    function pet_menu() {
+        $items = array();
+        $items['favorite_pet'] = array(
+            'title' => "Sadie",
+            "page callback" => "display_sadie",
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+
+        return $items;
+    }
+
+    function display_sadie() {
+
+        return "<img src='/sites/all/modules/pet/dog.jpg'>";
+    }
