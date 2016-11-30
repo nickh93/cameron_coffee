@@ -1,0 +1,34 @@
+<?php
+
+    function sum_menu() {
+        $items = array();
+        $items['sum'] = array(
+            'title' => 'Calculate Sum',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('sum_form'), //this will tell drupal that whehn the sum url is visited, the drupal_get_form function will run with the argument sum_form, sum_form is the name of the function that drupal will call to build the form
+            'type' => MENU_NORMAL_ITEM,
+            'access callback' => TRUE,
+        );
+        return $items;
+    }
+
+    function sum_form() {
+        $form['left_number'] = array(
+            '#title' => 'Left Number',
+            '#type' => 'textfield',
+            '#description' => t('Please enter your starting number'),
+        );
+
+        $form['right_number'] = array(
+            '#title' => 'Right Number',
+            '#type' => 'textfield',
+            '#description' => t('Please enter a number to add to your starting number'),
+        );
+
+        $form['submit'] = array(
+            '#type' => 'submit',
+            '#value' => 'Calculate Sum',
+        );
+
+        return $form;
+    }

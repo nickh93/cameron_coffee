@@ -1,0 +1,5 @@
+name = Hello User
+description = a module that will route the user to a confirmation page when a new account is created
+package = My First Modules
+core = 7.x
+files[] = hello_user.module

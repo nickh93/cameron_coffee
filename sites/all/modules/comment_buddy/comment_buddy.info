@@ -1,0 +1,5 @@
+name = Comment Buddy
+description = Creates messages every time commets are created, edited or deleted
+package = My First Modules
+core = 7.x
+files[] = comment_buddy.module
