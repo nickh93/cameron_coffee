@@ -9,6 +9,13 @@
             'type' => MENU_NORMAL_ITEM,
             'access callback' => TRUE,
         );
+
+        $items['success'] = array(
+            'title' => 'Success',
+            'type' => MENU_CALLBACK,
+            'access callback' => TRUE,
+            'page callback' => 'sum_success',
+        );
         return $items;
     }
 
@@ -31,4 +38,17 @@
         );
 
         return $form;
+    }
+
+    function sum_form_submit($form, &$form_state) {
+        $first_number = $form_state['values']['left_number'];
+        $second_number = $form_state['values']['right_number'];
+        $sum = $first_number + $second_number;
+        $_SESSION['sum_output'] = $sum;
+        $form_state['redirect'] = 'success';
+    }
+
+    function sum_success() {
+        $answer = $_SESSION['sum_output'];
+        return "you've calculated a sum! The answer is $answer";
     }
